@@ -19,15 +19,15 @@ Program przyjmuje pliki od każdego uzytkownika (nie rozróżnia kto może a kto
 
 ### Skrót schematu blokowego
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 ### Schemat blokowy programu 
 
-![alt text](image-2.png)
+![alt text](images/image-3.png)
 
 ## Rysunek poglądowy 
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 
 
