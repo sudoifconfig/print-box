@@ -52,14 +52,14 @@ class UltraSensor:
 
                 distance = round(distance+1.15, 2)
             
-                if distance<=20 and distance>=5:
+                if distance<=100 and distance>=5:
                     print ("distance:",distance,"cm")
                     self.i=1
                     
-                if distance>20 and self.i==1:
+                if distance>100 and self.i==1:
                     print ("place the object....")
                     self.i=0
-                time.sleep(2)
+                break
         
         except:
             print("Problem")
