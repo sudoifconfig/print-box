@@ -1,12 +1,12 @@
 #import src.drukomat_class
-import src.program_class
+#import src.program_class
 import src.ultrasensor_class
 import src.led_class
 
 import time
 
 #drukomat_01 = src.drukomat_class.Drukomat()
-program_01 = src.program_class.Program()
+#program_01 = src.program_class.Program()
 
 ultrasensor_01 = src.ultrasensor_class.UltraSensor()
 
@@ -31,7 +31,7 @@ def main():
 
         distance = ultrasensor_01.return_value()
         print (distance)
-        time.sleep(2)
+        
 
 
 
