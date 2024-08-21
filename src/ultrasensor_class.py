@@ -19,6 +19,7 @@ class UltraSensor:
         GPIO.setup(self.trig,GPIO.OUT)
         GPIO.setup(self.echo,GPIO.IN)
 
+        GPIO.setwarnings(False)
 
         
 
@@ -26,7 +27,7 @@ class UltraSensor:
 
     def return_value(self):
 
-        GPIO.output(TRIG, False)
+        GPIO.output(self.trig, False)
         print ("Calibrating.....")
         time.sleep(2)
 
@@ -53,11 +54,11 @@ class UltraSensor:
             
                 if distance<=20 and distance>=5:
                     print ("distance:",distance,"cm")
-                    i=1
+                    self.i=1
                     
-                if distance>20 and i==1:
+                if distance>20 and self.i==1:
                     print ("place the object....")
-                    i=0
+                    self.i=0
                 time.sleep(2)
         
         except:
