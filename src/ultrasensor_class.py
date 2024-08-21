@@ -18,13 +18,18 @@ class UltraSensor:
         GPIO.setup(self.trig,GPIO.OUT)
         GPIO.setup(self.echo,GPIO.IN)
 
-        GPIO.output(self.trig, False)
+        
 
 
 
     def return_value(self):
 
         try:
+
+            GPIO.output(self.trig, False)
+            print ("Calibrating.....")
+            time.sleep(2)
+
             GPIO.output(self.trig, True)
             time.sleep(0.00001)
             GPIO.output(self.trig, False)
