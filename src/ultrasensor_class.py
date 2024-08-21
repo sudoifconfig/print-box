@@ -9,7 +9,7 @@ class UltraSensor:
     def __init__(self):
       
         GPIO.setmode(GPIO.BOARD)
-
+        GPIO.output(self.trig, False)
 
         self.trig = 18
         self.echo = 16
