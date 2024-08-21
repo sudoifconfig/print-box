@@ -1,9 +1,19 @@
 #import src.drukomat_class
 import src.program_class
+import src.ultrasensor_class
+import src.led_class
 
+import time
 
 #drukomat_01 = src.drukomat_class.Drukomat()
 program_01 = src.program_class.Program()
+
+ultrasensor_01 = src.ultrasensor_class.UltraSensor()
+
+
+
+
+
 
 
 host = "imap.gmail.com"
@@ -16,14 +26,13 @@ download_folder = "C:/Users/piotr/OneDrive/Pulpit/print-box/pdfs_file"
 
 
 def main():
-    print ("*Program START*")
-    # set up section
-    program_01.download_pdf_files(host,username,password,download_folder)
-    program_01.print_pdf_files()
     
-    
-    #print ("*Program zaczyna pętle*")
-    #while True:
+    while True:
+
+        distance = ultrasensor_01.return_value()
+        print (distance)
+        time.sleep(2)
+
 
 
 

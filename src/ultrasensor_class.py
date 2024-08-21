@@ -28,10 +28,10 @@ class UltraSensor:
     def return_value(self):
 
         GPIO.output(self.trig, False)
-        print ("Calibrating.....")
+        #print ("Calibrating.....")
         time.sleep(2)
 
-        print ("Place the object......")
+        #print ("Place the object......")
 
         try:
 
@@ -51,15 +51,18 @@ class UltraSensor:
                 distance = pulse_duration * 17150
 
                 distance = round(distance+1.15, 2)
-            
+                """
                 if distance<=100 and distance>=5:
-                    print ("distance:",distance,"cm")
+                    print (distance)
                     self.i=1
                     
                 if distance>100 and self.i==1:
                     print ("place the object....")
                     self.i=0
-                break
+                """
+                return float(distance)
+
+                
         
         except:
-            print("Problem")
+            print("Problem ultrasensor_class.py")
