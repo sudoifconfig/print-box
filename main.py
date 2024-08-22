@@ -28,13 +28,13 @@ def main():
         print (distance)
 
         if distance <= 10.00:
-            led_01.red_led_ON
+            led_01.red_led_ON()
 
         if distance > 10.00:
-            led_01.yelow_led_ON
+            led_01.yelow_led_ON()
 
         if distance > 20.00:
-            led_01.green_led_ON
+            led_01.green_led_ON()
 
         time.sleep(0.2)
 
