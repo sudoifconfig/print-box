@@ -15,10 +15,10 @@ class LEDclass:
 
     
     def red_led_ON(self):
-        
+
         GPIO.setup(8, GPIO.OUT, initial=GPIO.LOW)
         GPIO.output(8, GPIO.HIGH)
-        sleep(1)
+        
 
     def red_led_OFF(self):
         GPIO.output(8, GPIO.LOW)
@@ -38,5 +38,5 @@ class LEDclass:
     def yelow_led_ON(self):
         GPIO.output(12, GPIO.HIGH)
 
-    def yelow_led_OF(self):
+    def yelow_led_OFF(self):
         GPIO.output(12, GPIO.LOW)

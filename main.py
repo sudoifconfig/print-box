@@ -2,7 +2,6 @@
 #import src.program_class
 import src.ultrasensor_class
 import src.led_class
-i
 
 import time
 
@@ -29,13 +28,19 @@ def main():
 
         if distance <= 10.00:
             led_01.red_led_ON()
+            led_01.green_led_OFF()
+            led_01.yelow_led_OFF()
 
         if distance > 10.00:
             led_01.yelow_led_ON()
+            led_01.green_led_OFF()
+            led_01.red_led_OFF()
+
 
         if distance > 20.00:
             led_01.green_led_ON()
-
+            led_01.yelow_led_OFF()
+            led_01.red_led_OFF()
         time.sleep(0.2)
 
 
