@@ -17,3 +17,5 @@ led_01 = src.led_class.LEDclass()
 
 
 led_01.red_led_ON()
+
+led_01.green_led_ON()
