@@ -5,7 +5,7 @@ from time import sleep # Import the sleep function from the time module
 
 class LEDclass:
     
-    def __init__(self) -> None:
+    def __init__(self):
         GPIO.setwarnings(False) # Ignore warning for now
         GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
 
@@ -15,7 +15,10 @@ class LEDclass:
 
     
     def red_led_ON(self):
+        
+        GPIO.setup(8, GPIO.OUT, initial=GPIO.LOW)
         GPIO.output(8, GPIO.HIGH)
+        sleep(1)
 
     def red_led_OFF(self):
         GPIO.output(8, GPIO.LOW)
