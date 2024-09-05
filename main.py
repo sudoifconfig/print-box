@@ -1,12 +1,12 @@
-#import src.drukomat_class
-#import src.program_class
+import src.drukomat_class
+import src.program_class
 import src.ultrasensor_class
 import src.led_class
 
 import time
 
-#drukomat_01 = src.drukomat_class.Drukomat()
-#program_01 = src.program_class.Program()
+drukomat_01 = src.drukomat_class.Drukomat()
+program_01 = src.program_class.Program()
 
 ultrasensor_01 = src.ultrasensor_class.UltraSensor()
 led_01 = src.led_class.LEDclass()
@@ -23,36 +23,29 @@ def main():
     
     while True:
 
-        distance = ultrasensor_01.return_value()
-        print (distance)
+        print("Print TEST (0)")
+        print("Drukuj plik PDF (1)")
+        print("Winda na poziom X (2)")
+        print("Przechyl w LEWO (3)")
+        print("Przechyl w PRAWO (4)")
+        print("Zapadka_1 ON poziom 1 (5)")
 
-        if distance <= 10.00:
-            led_01.red_led_ON()
-            led_01.green_led_OFF()
-            led_01.yelow_led_OFF()
+        anser = input("Wybierz opcje: ")
 
-        if distance > 10.00:
-            led_01.yelow_led_ON()
-            led_01.green_led_OFF()
-            led_01.red_led_OFF()
+        anser = int 
 
+        if anser == 1:
+            pass
 
-        if distance > 20.00:
-            led_01.green_led_ON()
-            led_01.yelow_led_OFF()
-            led_01.red_led_OFF()
-        time.sleep(0.2)
+        if anser == 2:
+            pass
 
-
+        if anser == 0:
+            print("teścik teścik")
 
 
 
-
-
-
-        
-
-
+    
 
 
 main()

@@ -1,4 +1,4 @@
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 
 
 
@@ -41,7 +41,8 @@ class Drukomat:
             print ("ERROR, nie prawidłowa wartość [class drukomat func. winda_na_x_pietro()]")
 
 
-
+    def return_free_box(self):
+        return self.wolne_skrzynki
 
 
     def podajnik_tasmowy(self):
@@ -55,3 +56,8 @@ class Drukomat:
 
     def print_test(self):
         print("TEST class Drukomat print")
+
+
+
+    def print_pdf_and_send_to_box(self):
+        print("Winda na P0")
