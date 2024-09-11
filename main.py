@@ -61,14 +61,16 @@ def main():
 
             if anser == "1":
                 led_object.red_led_ON()
-                time.sleep(1)
                 print ("LED on")
+                time.sleep(1)
                 break
                 
 
-            elif anser == 2:
+            elif anser == "2":
                 led_object.red_led_OFF()
                 print("LED off")
+                time.sleep(1)
+                break
 
 
             elif anser == 0:
