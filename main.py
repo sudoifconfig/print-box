@@ -37,9 +37,10 @@ L_box_1 = bool
 R_box_1 = bool
 
 def main():
-    os.system("clear")
+    
     while True:
-
+        os.system("clear")
+        
         print("== Podglad ==")
         print(f"Winda poziom: {winda_poziom}")
         print(f"Wolne_boxy: {wolne_boxy}")
@@ -64,14 +65,16 @@ def main():
             continue
             
 
-        if anser == 2:
+        elif anser == 2:
             led_object.red_led_OFF()
             print("LED off")
 
 
-        if anser == 0:
+        elif anser == 0:
             print("teścik teścik")
 
+        else:
+            print("kurcze problem")
 
 
     
