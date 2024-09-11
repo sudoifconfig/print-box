@@ -40,7 +40,7 @@ def main():
     
     while True:
         os.system("clear")
-        
+
         print("== Podglad ==")
         print(f"Winda poziom: {winda_poziom}")
         print(f"Wolne_boxy: {wolne_boxy}")
@@ -54,30 +54,31 @@ def main():
         print("Dioda_RED_ON (1)")
         print("Dioda_RED_OFF (2)")
 
-        anser = input("Wybierz opcje: ")
+        while True:
 
-        anser = int 
-
-        if anser == 1:
-            led_object.red_led_ON()
-            time.sleep(1)
-            print ("LED on")
-            continue
-            
-
-        elif anser == 2:
-            led_object.red_led_OFF()
-            print("LED off")
+            anser = input("Wybierz opcje: ")
 
 
-        elif anser == 0:
-            print("teścik teścik")
+            if anser == "1":
+                led_object.red_led_ON()
+                time.sleep(1)
+                print ("LED on")
+                break
+                
 
-        else:
-            print("kurcze problem")
+            elif anser == 2:
+                led_object.red_led_OFF()
+                print("LED off")
 
 
-    
+            elif anser == 0:
+                print("teścik teścik")
+
+            else:
+                print("kurcze problem")
+
+
+        
 
 
 main()
