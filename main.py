@@ -1,7 +1,7 @@
 import time
 import RPi.GPIO as GPIO
 import src.led_class
-
+import os
 
 
 """
@@ -24,8 +24,6 @@ username = "dr.grubylolek@gmail.com"
 password = 'lkvd djam lizu exmo'
 download_folder = "C:/Users/piotr/OneDrive/Pulpit/print-box/pdfs_file"
 """
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
 
 led_object = src.led_class.LEDclass()
 
@@ -39,10 +37,10 @@ L_box_1 = bool
 R_box_1 = bool
 
 def main():
-    
+    os.system("clear")
     while True:
 
-        print("==Podglad==")
+        print("== Podglad ==")
         print(f"Winda poziom: {winda_poziom}")
         print(f"Wolne_boxy: {wolne_boxy}")
         print(f"Zajete boxy: {zajete_boxy}")
@@ -50,7 +48,7 @@ def main():
         print(f"L_box_1: {L_box_1}")
         print(f"R_box_1{R_box_1}")
 
-
+        print("=== OPCJE ===")
         print("Print TEST (0)")
         print("Dioda_RED_ON (1)")
         print("Dioda_RED_OFF (2)")
@@ -61,7 +59,9 @@ def main():
 
         if anser == 1:
             led_object.red_led_ON()
+            time.sleep(1)
             print ("LED on")
+            continue
             
 
         if anser == 2:
