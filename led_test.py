@@ -2,20 +2,27 @@ import RPi.GPIO as GPIO
 import time
 import src.led_class
 
-"""
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
-GPIO.setup(8,GPIO.OUT)
-print ("LED on")
-GPIO.output(18,GPIO.HIGH)
-time.sleep(1)
-print ("LED off")
-GPIO.output(8,GPIO.LOW)"""
+
+led_class = src.led_class.LEDclass()
 
 
-led_01 = src.led_class.LEDclass()
+def test():
+
+    led_class.red_led_ON()
+    time.sleep(1)
+    led_class.red_led_OFF()
+
+    led_class.green_led_ON()
+    time.sleep(1)
+    led_class.green_led_OFF()
+
+    led_class.blue_1_led_ON()
+    time.sleep(1)
+    led_class.blue_1_led_OFF()
+
+    led_class.blue_2_led_ON()
+    time.sleep(1)
+    led_class.blue_2_led_OFF
 
 
-led_01.red_led_ON()
-
-led_01.green_led_ON()
+test()
